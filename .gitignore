@@ -20,4 +20,4 @@ pip-selfcheck.json
 __pycache__/
 .vscode/
 env/
-**/.env% 
+**/.env%
