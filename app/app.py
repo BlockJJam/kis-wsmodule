@@ -1,5 +1,6 @@
 from pathlib import Path
 from fastapi import FastAPI
+import api
 import sys
 
 BASE_DIR = Path(__file__).resolve()
@@ -7,7 +8,7 @@ sys.path.append(str(BASE_DIR))
 
 def create_app() -> FastAPI:
     app = FastAPI()
-    # app.include_router(api.live_router, prefix='/ws')
+    app.include_router(api.ws_router, prefix='/ws')
 
     return app
 
