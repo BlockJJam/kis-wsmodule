@@ -16,5 +16,16 @@ from ws.handler.rest import AuthHandler, StockHandler
 # auth.test_hashkey_request()
 # auth.test_get_access_token()
 
-stock = StockHandler()
-stock.test_get_marketprice()
+# stock = StockHandler()
+# stock.test_get_marketprice()
+
+
+import asyncio 
+from ws.handler.ws_client import *
+try:
+    asyncio.get_event_loop().run_until_complete(connect())
+    asyncio.get_event_loop().close()    
+except KeyboardInterrupt as e:
+    print(e)
+
+

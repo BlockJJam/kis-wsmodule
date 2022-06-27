@@ -17,3 +17,5 @@ app = create_app()
 if __name__ == '__main__':
     import uvicorn
     uvicorn.run('app:app', ws_ping_interval=5, ws_ping_timeout=5, log_level='debug')
+
+
